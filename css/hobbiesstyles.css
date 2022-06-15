@@ -1,0 +1,17 @@
+.narrowcontent {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.narrowtable {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.book {
+  width: 50px;
+}
+
+body {
+  background-color: black;
+}

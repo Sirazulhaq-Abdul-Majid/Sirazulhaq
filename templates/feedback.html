@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Orangutan
+        </title>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../js/feedback_function.js"></script>
+        <link href='../css/feedbackstyles.css' type='text/css' rel='stylesheet'>
+    </head>
+    <body style='background-image: url("../resources/marble.png");background-size: cover;background-repeat: no-repeat;'>
+        <div style="width:1300px;height:155%;margin-left:6%;margin-right: 6%;margin-top: 5%;background-color: white;">
+            <img src='../resources/feedback.jpg' alt='people discussing' style="height:442.3px"><br><br><br><br>
+            <div class='bigcenter'>Website Feedback</div><br><br><br><br>
+            <form  style='text-align: center;'>
+                <h3>What do you feel about my website?</h3><br>
+                <input type="radio" id="satisfied" name='feeling' value='satisfied'>
+                <label for='satisfied'>satisfied&emsp;&emsp;</label>
+                <input type="radio" id="neutral" name='feeling' value='neutral'>
+                <label for='neutral'>neutral&emsp;&emsp;</label>
+                <input type="radio" id='not satisfied' name='feeling' value='not satisfied'>
+                <label for='not satisfied'>not satisfied</label><br><br>
+                <h3>Where do you think i can improve?</h3><br>
+                <input type='checkbox' id="b" name="looks" value="looks">
+                <label for='looks'>Looks</label>
+                <input type='checkbox' id='b' name='functionality' value='functionality'>
+                <label for='functionality'>Functionality</label>
+                <input type="checkbox" id='b' name='interactivity' value='interactivity'>
+                <label for='interactivity'>Interactivity</label><br><br>
+                <h3>Is the websites easy to navigate</h3><br>
+                <select name='navigate' id='navigate'>
+                    <option value='no'>No</option>
+                    <option value='yes'>Yes</option>
+                    <option value='maybe'>Maybe</option>
+                </select><br><br><br><br><br><br>
+                <input type='submit' value='Submit!' class='a'>
+            </form>
+        </div>
+    </body>
+</html>
