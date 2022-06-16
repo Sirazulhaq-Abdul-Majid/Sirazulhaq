@@ -17,7 +17,7 @@ function regexp(x){
     let rest=q.substring(2,);
     if(q.search(/--help/i)==0){
         if(q==='--help'){
-            output="available commands:<br><br>ls <div style='text-align: left;'>(show the full list or content of your directory)</div><br>./[program name] <div style='text-align: left;'>(to run programs)</div>";
+            output="available commands:<br><br><b>ls</b> <div style='text-align: left;'>(show the full list or content of your directory)</div><br><b>./</b>[program name] <div style='text-align: left;'>(to run programs)</div>";
             $('#mainipt').focus().val("");
         }
         else{
@@ -47,6 +47,9 @@ function regexp(x){
         }
         else if(rest==="Feedback.exe"||rest==="Feedback"){
             window.open("templates/feedback.html");
+        }
+        else if(rest==="SECRET.exe"||rest==="SECRET"){
+            window.open('https://youtu.be/dQw4w9WgXcQ');
         }
     }
     else{
