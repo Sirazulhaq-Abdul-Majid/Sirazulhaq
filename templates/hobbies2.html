@@ -3,7 +3,9 @@
         <title>
             My_Hobbies
         </title>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
         <link href='../css/hobbiesstyles.css' type='text/css' rel='stylesheet'>
+        <script type="text/javascript" src="../js/hobbies_function.js"></script>
     </head>
     <body>
         <div style="margin-left:50px;margin-top:100px;width:400px;height:500px; background-color: darkblue;z-index:-1;position:absolute;text-align: center;">
@@ -58,13 +60,13 @@
             </div>
         </div>
         <div style="margin-left:400px;margin-top:30px;width:800px;height:300px;z-index:1;position:absolute;background-color: green;">
-            <table style='width: 100%;height:100%;'>
+            <table style='width: 100%;height:100%;position:absolute;top:-50;left:-10'>
                 <tr>
                     <th>
                         <h1>Programming</h1>
                     </th>
                     <td>
-                        <a href="https://github.com/bumpefy/asmFileEditor.git" target=blank><text style='font-size: large;padding-left: 50px;'>I like to make simple programs in my free time.</a></text>
+                        <a href="https://github.com/bumpefy/asmFileEditor.git" target=blank><text style='font-size: large'>I like to make simple programs in my free time.</a></text>
                     </td>
                 </tr>
             </table>
@@ -74,13 +76,67 @@
             <h3 class="narrowcontent">I got into reading a few years ago. Some of the books I've read are:</h3><br><br>
             <table class='narrowtable'>
                 <tr><th>Kafka on the Shore by Haruki Murakami</th><td><img src="../resources/kafka.jpg" alt='kafka on the shore' class='book'></td></tr>
-                <tr><th>Colorless Tsukuru Tazaki</th><td><img src="../resources/colorless.jpg" alt='colorless tsukuru Tazaki' class='book'></td></tr>
-                <tr><th>When breath becomes air</th><td><img src="../resources/breath.jpg" alt='when breath becomes air' class='book'></td></tr>
-                <tr><th>The book thief</th><td><img src="../resources/book.jpg" alt='book thief' class='book'></td></tr>
+                <tr><th>Colorless Tsukuru Tazaki by Haruki Murakami</th><td><img src="../resources/colorless.jpg" alt='colorless tsukuru Tazaki' class='book'></td></tr>
+                <tr><th>When breath becomes air by Paul Kalanithi</th><td><img src="../resources/breath.jpg" alt='when breath becomes air' class='book'></td></tr>
+                <tr><th>The book thief by Markus Zusak</th><td><img src="../resources/book.jpg" alt='book thief' class='book'></td></tr>
             </table>
         </div>
-        <div style="margin-left:500;margin-right:auto; margin-top:300px;width:600px;height:400px;z-index:3;position:absolute; background-color: red;text-align: center;">
-            <iframe src="https://youtu.be/yiw6_JakZFc" title='I also like watching YouTube'></iframe>
+        <div style="margin-left:500;margin-right:auto; margin-top:200px;width:600px;height:530px;z-index:3;position:absolute; background-color: red;text-align: center;">
+            <h2>Photography</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 4</div>
+                  <img src="../resources/img1.jpg" style="width:100%">
+                </div>
+              
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 4</div>
+                  <img src="../resources/img2.jpg" style="width:100%">
+                </div>
+              
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 4</div>
+                  <img src="../resources/img3.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="../resources/img4.jpg" style="width:100%">
+                </div>
+              
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+              <br>
+              
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+              </div>
+
         </div>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 4000); 
+            }
+            </script>
     </body>
 </html>
