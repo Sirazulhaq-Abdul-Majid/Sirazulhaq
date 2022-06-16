@@ -17,7 +17,7 @@ function regexp(x){
     let rest=q.substring(2,);
     if(q.search(/--help/i)==0){
         if(q==='--help'){
-            output="available commands:<br><br><b>ls</b> <div style='text-align: left;'>(show the full list or content of your directory)</div><br><b>./</b>[program name] <div style='text-align: left;'>(to run programs)</div>";
+            output="available commands:<br><br><b>ls</b> <div style='text-align: left;'>(show the full list or content of your directory)</div><br><br><br><b>./</b>[program name] <div style='text-align: left;'>(to run programs)<br>ie:<b>&emsp;./My_Self</b></div>";
             $('#mainipt').focus().val("");
         }
         else{
@@ -40,16 +40,16 @@ function regexp(x){
     }
     else if(firsttwo=="./"){
         if(rest==="My_Self.exe"||rest==="My_Self"){
-            window.open("templates/myself.html");
+            window.open("templates/myself.html","_self");
         }
         else if(rest==="My_Hobbies.exe"||rest==="My_Hobbies"){
-            window.open("templates/hobbies1.html");
+            window.open("templates/hobbies1.html","_self");
         }
         else if(rest==="Feedback.exe"||rest==="Feedback"){
-            window.open("templates/feedback.html");
+            window.open("templates/feedback.html","_self");
         }
         else if(rest==="SECRET.exe"||rest==="SECRET"){
-            window.open('https://youtu.be/dQw4w9WgXcQ');
+            window.open('https://youtu.be/dQw4w9WgXcQ',"_self");
         }
     }
     else{
