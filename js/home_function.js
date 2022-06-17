@@ -19,10 +19,12 @@ function regexp(x){
         if(q==='--help'){
             output="available commands:<br><br><b>ls</b> <div style='text-align: left;'>(show the full list or content of your directory)</div><br><br><br><b>./</b>[program name] <div style='text-align: left;'>(to run programs)<br>ie:<b>&emsp;./My_Self</b></div>";
             $('#mainipt').focus().val("");
+            $('#mainipt').focus().val("");
         }
         else{
             output="did you mean --help?";
             $('#mainipt').focus();
+            $('#mainipt').focus().val("");
         }
     }
     else if(q.search(/ls/i)==0){
@@ -32,10 +34,12 @@ function regexp(x){
         }
         else if(q=="ls -a"){
             output="My_Self.exe<br>My_Hobbies.exe<br>Feedback.exe<br>SECRET.exe";
+            $('#mainipt').focus().val("");
         }
         else{
             output="did you mean ls?";
             $('#mainipt').focus();
+            $('#mainipt').focus().val("");
         }
     }
     else if(firsttwo=="./"){
@@ -54,6 +58,7 @@ function regexp(x){
     }
     else{
         output=""+q+": command is not found.";
+        $('#mainipt').focus().val("");
     }
     
     return output;
